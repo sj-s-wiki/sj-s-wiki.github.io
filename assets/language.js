@@ -70,7 +70,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 "laplace-derivative-general": "Generalizing this, we get:",
                 "laplace-differential-equations": "This can be used to solve differential equations.",
                 "laplace-applications": "Applications",
-                "laplace-applications-description": "Laplace transforms are used in various fields such as circuit analysis, control systems, and signal processing."
+                "laplace-applications-description": "Laplace transforms are used in various fields such as circuit analysis, control systems, and signal processing.",
+                "title ss" : "Signal and System | SJ's Wiki",
+                "overview-ss" : "Signals and Systems is a course that covers the basic concepts of signals and the Fourier and Laplace transforms using them.",
+                "chapter-ss-zero" : "Chapter 0. What are Signals and Systems?",
+                "chapter-ss-one" : "Chapter 1. Linear Systems and Impulse Response",
+                "chapter-ss-two" : "Chapter 2. First Order Differential Equations",
+                "chapter-ss-three" : "Chapter 3. Fourier Series",
+                "chapter-ss-four" : "Chapter 4. Fourier Transforms",
+                "chapter-ss-five" : "Chapter 5. Laplace Transforms"
             },
             ko: {
                 title: "SJ의 위키",
@@ -131,7 +139,15 @@ document.addEventListener("DOMContentLoaded", function () {
                 "laplace-derivative-general": "이를 일반화하면 다음과 같다.",
                 "laplace-differential-equations": "이를 활용하여 미분방정식을 풀 수 있다.",
                 "laplace-applications": "응용",
-                "laplace-applications-description": "라플라스 변환은 회로 해석, 제어 시스템, 신호 처리 등 다양한 분야에서 활용된다."
+                "laplace-applications-description": "라플라스 변환은 회로 해석, 제어 시스템, 신호 처리 등 다양한 분야에서 활용된다.",
+                "title ss" : "신호 및 시스템 | Sj's Wiki",
+                "overview-ss" : "신호및시스템은 신호의 기본 개념과 이를 이용하여 푸리에변환과 라플라스 변환에 대해 다루는 과목입니다.",
+                "chapter-ss-zero" : "Chapter 0. 신호및시스템이란?",
+                "chapter-ss-one" : "Chapter 1. 선형 시스템과 임펄스 응답",
+                "chapter-ss-two" : "Chapter 2. 일차 미분 방정식",
+                "chapter-ss-three" : "Chapter 3. 푸리에 급수",
+                "chapter-ss-four" : "Chapter 4. 푸리에 변환",
+                "chapter-ss-five" : "Chapter 5. 라플라스 변환"
             }
         };
 
