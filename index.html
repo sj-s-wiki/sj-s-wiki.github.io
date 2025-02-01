@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SJ's Wiki</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <script src="assets/lunr.js"></script> <!-- 검색 엔진 -->
+    <script defer src="assets/main.js"></script> <!-- 헤더/푸터 로드 & 검색 기능 -->
+    <script defer src="assets/language.js"></script> <!-- 번역 기능 -->
+</head>
+<body>
+<!-- 헤더 로드 -->
+<div id="header"></div>
+
+<main class="center-content">
+    <h1 data-key="title">SJ's Wiki</h1>
+    <input type="text" id="search" class="wide-search" placeholder="검색어를 입력하세요..." data-key="search-placeholder">
+    <div class="grid-container">
+        <div class="card">
+            <img src="https://i.imgur.com/fk32OVF.png" alt="공업수학" class="card-img">
+            <h2 data-key="nav-math">공업수학</h2>
+            <p data-key="desc-math">공업 수학 개념을 정리하고 학습할 수 있습니다.</p>
+            <a href="pages/Engineering%20Mathematics.html" class="button" data-key="view-more">자세히 보기</a>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/Ra75obB.png" alt="선형대수학" class="card-img">
+            <h2 data-key="nav-linear-algebra">선형대수학</h2>
+            <p data-key="desc-linear-algebra">행렬과 벡터 연산을 배우는 공간입니다.</p>
+            <a href="pages/Linear%20Algebra.html" class="button" data-key="view-more">자세히 보기</a>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/4xZrWCk.png" alt="이산수학" class="card-img">
+            <h2 data-key="nav-discrete-math">이산수학</h2>
+            <p data-key="desc-discrete-math">논리, 그래프 이론, 집합론을 다룹니다.</p>
+            <a href="pages/Discrete%20Mathematics.html" class="button" data-key="view-more">자세히 보기</a>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/XuTJpvG.png" alt="신호 및 시스템" class="card-img">
+            <h2 data-key="nav-signals">신호 및 시스템</h2>
+            <p data-key="desc-signals">푸리에 변환, 라플라스 변환 개념 학습</p>
+            <a href="pages/Signals%20and%20Systems.html" class="button" data-key="view-more">자세히 보기</a>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/Hi7mFqY.png" alt="소프트웨어공학" class="card-img">
+            <h2 data-key="nav-software">소프트웨어공학</h2>
+            <p data-key="desc-software">소프트웨어 개발 프로세스와 원칙을 배웁니다.</p>
+            <a href="pages/Software%20Engineering.html" class="button" data-key="view-more">자세히 보기</a>
+        </div>
+        <div class="card">
+            <img src="https://i.imgur.com/6PeFoxh.png" alt="운영체제" class="card-img">
+            <h2 data-key="nav-os">운영체제</h2>
+            <p data-key="desc-os">운영체제의 개념과 프로세스 관리를 다룹니다.</p>
+            <a href="pages/Operating%20System.html" class="button" data-key="view-more">자세히 보기</a>
+        </div>
+    </div>
+</main>
+
+<!-- 푸터 로드 -->
+<div id="footer"></div>
+</body>
+</html>

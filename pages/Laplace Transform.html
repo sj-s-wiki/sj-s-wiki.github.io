@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-key="title lt">라플라스 변환 | 공업수학</title>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <script defer src="../assets/main.js"></script>
+    <script defer src="../assets/language.js"></script> <!-- 번역 기능 -->
+    <script type="text/javascript" async src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+</head>
+<body>
+<div id="header"></div> <!-- 헤더 로드 -->
+
+<main class="content-container">
+    <h1 data-key="chapter-laplace">라플라스 변환 (Laplace Transform)</h1>
+
+    <section>
+        <h2 data-key="laplace-overview">라플라스 변환 개요</h2>
+        <p data-key="laplace-overview-description">라플라스 변환은 미분방정식을 푸는 강력한 도구이다.
+            기존의 방식은 해의 형태를 예측하고 풀어야 했지만, 라플라스 변환은 예측 없이 문제를 해결할 수 있다.</p>
+        <p data-key="laplace-overview-introduction">라플라스 변환을 이해하기 전에 몇 가지 기본적인 전제를 확인하자.</p>
+    </section>
+
+    <section>
+        <h2 data-key="laplace-basics">라플라스 변환의 기본 전제</h2>
+        <ol>
+            <li data-key="laplace-time-variable">우리는 '시간'을 기본적인 변수로 사용한다. 따라서 수학적 변수 \( x \) 대신 \( t \)를 사용한다.</li>
+            <li data-key="laplace-dimension-change">라플라스 변환은 차원을 변환하는 것이다.
+                <ul>
+                    <li data-key="laplace-transform">라플라스 변환: \( t \to s \)</li>
+                    <li data-key="inverse-laplace-transform">역 라플라스 변환: \( s \to t \)</li>
+                </ul>
+            </li>
+            <li data-key="laplace-formula">라플라스 변환 공식:
+                <p>\[
+                    \mathcal{L} \{ f(t) \} = \int_{0}^{\infty} e^{-st} f(t) \, dt
+                    \]</p>
+            </li>
+            <li data-key="laplace-memorization">유명한 함수들의 변환 공식은 암기해야 한다.</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2 data-key="laplace-formulas">라플라스 변환 공식 정리</h2>
+        <table>
+            <tr><th>\( f(t) \)</th><th>\( \mathcal{L}\{ f(t) \} \)</th></tr>
+            <tr><td>\( e^{at} \)</td><td>\( \frac{1}{s-a} \)</td></tr>
+            <tr><td>\( 1 \)</td><td>\( \frac{1}{s} \)</td></tr>
+            <tr><td>\( t \)</td><td>\( \frac{1}{s^2} \)</td></tr>
+            <tr><td>\( t^2 \)</td><td>\( \frac{2}{s^3} \)</td></tr>
+            <tr><td>\( t^n \)</td><td>\( \frac{n!}{s^{n+1}} \)</td></tr>
+            <tr><td>\( \sin (kt) \)</td><td>\( \frac{k}{s^2 + k^2} \)</td></tr>
+            <tr><td>\( \cos (kt) \)</td><td>\( \frac{s}{s^2 + k^2} \)</td></tr>
+        </table>
+    </section>
+
+    <section>
+        <h2 data-key="first-push-method">1st Push Method</h2>
+        <p data-key="first-push-method-description">\( \mathcal{L} \{ e^{ax} f(t) \} \)의 경우, 다음과 같이 정리할 수 있다:</p>
+        <p>\[
+            \mathcal{L} \{e^{ax} f(x)\} = F(s-a)
+            \]</p>
+        <p data-key="first-push-method-application">이 개념을 잘 익히고 문제 풀이에서 활용하면 효과적이다.</p>
+    </section>
+
+    <section>
+        <h2 data-key="second-push-method">2nd Push Method</h2>
+        <p data-key="second-push-method-description">단위 계단 함수(Unit Step Function)를 이용하여 변환할 수 있다.</p>
+        <p>\[
+            u(t) = \begin{cases} 0 & (t < 0) \\ 1 & (t \geq 0) \end{cases}
+            \]</p>
+        <p data-key="laplace-transform-second-method">라플라스 변환은 다음과 같다.</p>
+        <p>\[
+            \mathcal{L} \{ u(t-a) \} = \frac{e^{-as}}{s}
+            \]</p>
+        <p data-key="second-push-method-conclusion">이를 이용하면 다음과 같이 정리할 수 있다.</p>
+        <p>\[
+            \mathcal{L} \{ f(t-a)u(t-a) \} = e^{-as} F(s)
+            \]</p>
+    </section>
+
+    <section>
+        <h2 data-key="laplace-function">함수의 라플라스 변환</h2>
+        <p>\[
+            \mathcal{L} \{ f(t) \} = \int_{0}^{\infty} e^{-st} f(t) \, dt
+        </p>
+        <p data-key="laplace-derivative">도함수의 라플라스 변환:</p>
+        <p>\[
+            \mathcal{L} \{ f'(t) \} = sF(s) - f(0)
+            \]</p>
+        <p data-key="laplace-derivative-general">이를 일반화하면 다음과 같다.</p>
+        <p>\[
+            \mathcal{L} \{ f^{(n)}(t) \} = s^{n}F(s) - s^{n-1}f(0) - \cdots - sf^{(n-1)} (0) - f^{(n-1)}(0)
+            \]</p>
+        <p data-key="laplace-differential-equations">이를 활용하여 미분방정식을 풀 수 있다.</p>
+    </section>
+
+    <section>
+        <h2 data-key="laplace-applications">응용</h2>
+        <p data-key="laplace-applications-description">라플라스 변환은 회로 해석, 제어 시스템, 신호 처리 등 다양한 분야에서 활용된다.</p>
+    </section>
+</main>
+
+<div id="footer"></div> <!-- 푸터 로드 -->
+</body>
+</html>
